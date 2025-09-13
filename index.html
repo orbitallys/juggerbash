@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Wundo Juggerbash - Challenge 20</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="menu" class="screen">
+    <h1>Wundo Juggerbash - Challenge 20</h1>
+    <div class="menu-buttons">
+      <button id="startBtn" class="menu-btn">Start Game</button>
+      <button id="statsBtn" class="menu-btn">Stats</button>
+    </div>
+    <audio id="menuMusic" src="assets/audio/menu_music.wav" loop></audio>
+  </div>
+
+  <div id="stats" class="screen hidden">
+    <h2>Stats</h2>
+    <div id="statsContent">
+      <p>Total Damage: <span id="statDamage">0</span></p>
+      <p>Rounds Survived: <span id="statRounds">0</span></p>
+      <p>Deaths: <span id="statDeaths">0</span></p>
+    </div>
+    <button id="backFromStats" class="menu-btn">Back</button>
+  </div>
+
+  <div id="game" class="screen hidden">
+    <div id="battleArea">
+      <canvas id="gameCanvas" width="960" height="540"></canvas>
+      <div id="battleUI">
+        <img id="enemySprite" src="assets/images/juggernaut.png" alt="Juggernaut">
+        <div id="dialogueBox">The Juggernaut watches you. <span id="dialogueText"></span></div>
+        <div id="actionRow">
+          <img class="actionBtn" src="assets/images/btn_fight.png" data-action="fight">
+          <img class="actionBtn" src="assets/images/btn_act.png" data-action="act">
+          <img class="actionBtn" src="assets/images/btn_item.png" data-action="item">
+          <img class="actionBtn" src="assets/images/btn_mercy.png" data-action="mercy">
+        </div>
+      </div>
+    </div>
+    <audio id="battleMusic" src="assets/audio/battle_music.wav" loop></audio>
+    <audio id="attackSfx" src="assets/audio/attack.wav"></audio>
+    <audio id="hitSfx" src="assets/audio/hit.wav"></audio>
+  </div>
+
+<script src="main.js"></script>
+</body>
+</html>
