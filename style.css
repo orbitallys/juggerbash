@@ -1,0 +1,27 @@
+
+:root{--bg:#000;--white:#fff}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--white);font-family:'Press Start 2P',monospace;display:flex;align-items:center;justify-content:center;height:100vh}
+.screen{width:100%;max-width:980px;padding:12px;text-align:center}
+.hidden{display:none}
+.menu-buttons{display:flex;flex-direction:column;gap:12px;align-items:center}
+.menu-row{position:relative;display:flex;align-items:center;gap:12px}
+.menu-btn{background:#111;color:var(--white);border:2px solid var(--white);padding:12px 20px;cursor:pointer}
+#battleArea{position:relative;width:960px;height:720px;display:flex;align-items:center;justify-content:center;flex-direction:column}
+#enemySprite{position:absolute;top:20px;left:50%;transform:translateX(-50%);width:220px;height:320px;image-rendering:pixelated}
+#gameCanvas{position:absolute;top:0;left:0; width:960px;height:640px;background:transparent}
+#battleUI{position:relative;bottom:12px;width:720px;display:flex;flex-direction:column;align-items:center;gap:8px;z-index:2}
+#dialogueBox{width:720px;height:96px;border:2px solid #fff;background:#111;padding:8px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+#dialogueText{font-size:12px;line-height:1.2;text-align:left;white-space:pre-wrap;width:100%}
+#sliderWrap{position:absolute;left:50%;transform:translateX(-50%);bottom:6px}
+#hpRow{width:720px;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+#hpText{color:white;font-size:12px}
+#hpBarWrap{width:520px;height:16px;border:2px solid #fff;position:relative;background:#222}
+#hpBar{height:100%;background:yellow;width:100%}
+#hpLost{position:absolute;right:0;top:0;height:100%;background:crimson;width:0;opacity:0.9;transition:opacity 0.5s,width 0.5s}
+#actionRow{display:flex;gap:8px}
+.actionBtn{width:160px;height:48px;border:2px solid orange;image-rendering:pixelated;cursor:pointer}
+.actionBtn.selected{border-color:yellow;box-shadow:none}
+#itemRow{width:720px;display:flex;gap:8px;justify-content:center}
+.soul{position:absolute;width:24px;height:24px;z-index:3;image-rendering:pixelated;transition:left 0.12s,top 0.12s}
+.soul-menu{position:relative;left:0;top:0;width:24px;height:24px;image-rendering:pixelated;transition:left 0.12s}
