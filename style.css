@@ -1,0 +1,23 @@
+
+:root{--bg:#000;--ui:#111;--white:#fff}
+*{box-sizing:border-box}
+body{margin:0;height:100vh;display:flex;align-items:center;justify-content:center;background:var(--bg);color:var(--white);font-family:'Press Start 2P',monospace}
+.screen{width:100%;max-width:980px;padding:20px;text-align:center}
+.hidden{display:none}
+.menu-btn{background:#111;color:var(--white);border:2px solid var(--white);padding:12px 20px;cursor:pointer;margin:8px}
+#battleArea{position:relative;display:flex;flex-direction:column;align-items:center;gap:8px}
+#gameCanvas{border:3px solid #fff;background:#000;image-rendering:pixelated}
+#battleUI{position:absolute;left:50%;transform:translateX(-50%);bottom:18px;width:760px;display:flex;flex-direction:column;align-items:center;gap:8px}
+#enemySprite{width:220px;height:320px;image-rendering:pixelated;filter:brightness(1)}
+#dialogueBox{width:720px;height:96px;border:2px solid #fff;background:#111;padding:8px;display:flex;align-items:center;font-size:12px}
+#hpRow{width:720px;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+#hpText{color:white;font-size:12px}
+#hpBarWrap{width:520px;height:16px;border:2px solid #fff;position:relative;background:#222}
+#hpBar{height:100%;background:yellow;width:100%}
+#hpLost{position:absolute;right:0;top:0;height:100%;background:crimson;width:0;opacity:0.9}
+#actionRow{display:flex;gap:8px}
+.actionBtn{width:160px;height:48px;border:2px solid orange;image-rendering:pixelated;cursor:pointer;opacity:0.95}
+.actionBtn.selected{border-color:yellow;box-shadow:0 0 8px yellow}
+#itemRow{width:720px;display:flex;gap:8px;justify-content:center}
+.itemCell{border:2px solid #666;padding:6px;background:#111}
+.floating{position:absolute;pointer-events:none;font-size:12px}
